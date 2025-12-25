@@ -1,0 +1,166 @@
+/* Pricing.css - Compact Professional Version */
+
+.pricing-page {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9fafb;
+}
+
+.pricing-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+}
+
+/* Pricing cards container */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Card styling - compact */
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.5rem;
+  width: 250px; /* smaller width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight the Pro plan */
+.pricing-card.pro {
+  border: 2px solid #2563eb;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f5ff 100%);
+}
+
+.pricing-card.pro::before {
+  content: "Most Popular";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #f59e0b;
+  color: #111827;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+/* Card Title */
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+.price span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.pricing-card.pro .price {
+  color: #1e3a8a;
+}
+
+/* Features list - compact */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  width: 100%;
+}
+
+.features li {
+  font-size: 0.875rem;
+  color: #374151;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.features li::before {
+  content: '✓';
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Button styling */
+.pricing-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+  background-color: #1e40af;
+}
+
+.pricing-card.pro .pricing-btn {
+  background-color: #1e3a8a;
+}
+
+.pricing-card.pro .pricing-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-container {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%;
+  }
+}

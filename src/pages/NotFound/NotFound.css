@@ -1,0 +1,72 @@
+.notfound-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fbfd, #e0e7ff);
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.notfound-container {
+  max-width: 500px;
+}
+
+.notfound-container h1 {
+  font-size: 100px;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0;
+}
+
+.notfound-container h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  color: #222;
+}
+
+.notfound-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.notfound-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+
+}
+.btn-home {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.2s;
+}
+
+.btn-home:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .notfound-container h1 {
+    font-size: 70px;
+  }
+
+  .notfound-container h2 {
+    font-size: 22px;
+  }
+
+  .btn-home {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

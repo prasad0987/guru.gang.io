@@ -1,0 +1,129 @@
+/* -------- BASE -------- */
+.about-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------- HERO -------- */
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: white;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+/* -------- CONTENT -------- */
+.about-content {
+  display: grid;
+  gap: 25px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h2 {
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* -------- CTA -------- */
+.about-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0078ff;
+}
+
+.about-cta p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-cta .btn {
+  padding: 12px 30px;
+  background: #0078ff;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.about-cta .btn:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* -------- ANIMATIONS -------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-card ul li {
+    font-size: 0.95rem;
+  }
+}

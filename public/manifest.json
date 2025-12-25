@@ -1,0 +1,25 @@
+{
+  "short_name": "V Guru",
+  "name": "Java Full Stack Developers Application",
+  "icons": [
+    {
+      "src": ".vg_logo_with_bg.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "vg_logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "vg_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

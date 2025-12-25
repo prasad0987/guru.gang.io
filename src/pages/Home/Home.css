@@ -1,0 +1,240 @@
+/* ---------- GLOBAL STYLES ---------- */
+.home-page {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  background: linear-gradient(120deg, #f7f9fc, #eef3f9);
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-buttons .btn {
+  background: #0078ff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #005fcc;
+  transform: translateY(-3px);
+}
+
+.hero-buttons .btn-outline {
+  border: 2px solid #0078ff;
+  background: transparent;
+  color: #0078ff;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: #0078ff;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1 1 45%;
+  text-align: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  padding: 4rem 8%;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ---------- SERVICES SECTION ---------- */
+.services {
+  padding: 4rem 8%;
+  background: #f9fbfd;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+  margin-bottom: 0.8rem;
+  color: #0078ff;
+}
+
+/* ---------- YOUTUBE SECTION ---------- */
+.youtube {
+  padding: 4rem 8%;
+  text-align: center;
+  background: linear-gradient(120deg, #eef6ff, #f9fbfd);
+}
+
+.youtube h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.youtube p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  color: #444;
+}
+
+.youtube .btn {
+  background: #ff0000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.youtube .btn:hover {
+  background: #cc0000;
+  transform: translateY(-3px);
+}
+
+/* ---------- CTA SECTION ---------- */
+.cta-footer {
+  padding: 4rem 8%;
+  text-align: center;
+  background: #0078ff;
+  color: #fff;
+}
+
+.cta-footer h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-footer p {
+  margin-bottom: 2rem;
+}
+
+.cta-footer .btn {
+  background: #fff;
+  color: #0078ff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.cta-footer .btn:hover {
+  background: #e6e6e6;
+  transform: translateY(-3px);
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .about p, .youtube p {
+    font-size: 1rem;
+  }
+}

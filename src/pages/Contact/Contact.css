@@ -1,0 +1,148 @@
+/*
+ * Contact.css
+ * Styles for the Contact component
+ */
+/* --- 1. CSS Variables for Easy Customization --- */
+:root {
+  --primary-color: #007bff; /* Bright, professional blue for main elements */
+  --text-color: #333;
+  --bg-color: #f7f9fc; /* Light, clean background */
+  --card-bg: #fff; /* White background for the form container */
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --success-color: #28a745;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. Global Page Layout & Typography --- */
+.contact-page {
+  /* Use a nice, modern font */
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-page h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.contact-page p {
+  color: var(--text-color);
+  font-size: 1.1em;
+  margin-bottom: 2em;
+  max-width: 600px;
+}
+
+/* --- 3. Contact Form Styling (Trendy Card Look) --- */
+.contact-form {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px; /* Max width for readability on large screens */
+  /* Trendy professional shadow */
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* --- 4. Input & Textarea Styling --- */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Slightly rounded for a softer look */
+  font-size: 1em;
+  color: var(--text-color);
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resize only */
+}
+
+/* Focus State: Professional & Clear */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none; /* Remove default outline */
+  /* Subtle glow/shadow on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Placeholder Styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* --- 5. Button Styling (Professional & Attractive) --- */
+.btn_sendmsg {
+  display: block; /* Make the button full width of its container */
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn_sendmsg:hover {
+  /* Darken the primary color slightly on hover */
+  background-color: #0056b3;
+  /* Lift the button slightly for a nice effect */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn_sendmsg:active {
+  /* Press down effect */
+  transform: translateY(0);
+}
+
+/* --- 6. Mobile Responsiveness (For smaller devices) --- */
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 20px 10px; /* Less vertical padding on small screens */
+  }
+
+  .contact-page h1 {
+    font-size: 2em; /* Smaller font on mobile */
+  }
+
+  .contact-page p {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  .contact-form {
+    padding: 20px; /* Reduce form padding */
+    border-radius: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .btn {
+    padding: 12px; /* Slightly smaller padding for controls */
+    font-size: 1em;
+  }
+}
